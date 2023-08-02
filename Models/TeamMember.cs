@@ -11,7 +11,7 @@ namespace Final_Project_Group_5.Model
         public string LastName { get; set; }
         public int Birthdate { get; set; }
         public string CollegeProgram { get; set; }
-        public int YearinthePrrogram { get; set; }
+        public int YearintheProgram { get; set; }
 
     }
 }
