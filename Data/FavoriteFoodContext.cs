@@ -13,5 +13,7 @@ namespace Final_Project_Group_5.Data
                 new FavoriteFood { Id = 1, Breakfast = "Waffles", Lunch = "Turkey Sandwich", Dinner = "Pasta", Dessert = "Ice Cream"}
                 );
         }
+
+        public DbSet<FavoriteFood> FavoriteFoods { get; set; }
     }
 }
