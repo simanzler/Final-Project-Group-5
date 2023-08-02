@@ -21,7 +21,7 @@ namespace Final_Project_Group_5.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.FavoriteFood);
+            return Ok(_context.FavoriteFoods.ToList());
         }
 
     }

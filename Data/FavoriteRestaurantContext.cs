@@ -13,5 +13,7 @@ namespace Final_Project_Group_5.Data
                 new FavoriteRestaurant { Id = 1, Italian = "Chicken Alfredo", Thai = "Pad Thai", Pizza = "Hawaiian", Sandwiches = "Turkey Club"}
                 );
         }
+
+        public DbSet<FavoriteRestaurant> FavoriteRestaurants { get; set; }
     }
 }
