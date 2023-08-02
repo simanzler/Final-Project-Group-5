@@ -1,5 +1,4 @@
-﻿
-using Final_Project_Group_5.Models;
+﻿using Final_Project_Group_5.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_Group_5.Data
@@ -12,7 +11,11 @@ namespace Final_Project_Group_5.Data
         {
             builder.Entity<TeamMember>().HasData(
                 new TeamMember { Id = 1, FirstName = "Dilpreet", LastName = "Supra", Birthdate = 09/05, CollegeProgram = "Software Development", YearintheProgram = 2}
+                new TeamMember { Id = 1, FirstName = "Dilpreet", LastName = "Supra", Birthdate = 09 / 05, CollegeProgram = "Software Development", YearintheProgram = 2 }
+                new TeamMember { Id = 1, FirstName = "Dilpreet", LastName = "Supra", Birthdate = 09 / 05, CollegeProgram = "Software Development", YearintheProgram = 2 }
                 );
         }
+
+        public DbSet<TeamMember> TeamMembers { get; set; }
     }
 }

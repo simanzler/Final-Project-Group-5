@@ -13,5 +13,7 @@ namespace Final_Project_Group_5.Data
                 new FavoriteHobby { Id = 1, Sport = "Boxing", Crafts = "Drawing", HoursPerWeek = 1, Movie = "Interstellar"}
                 );
         }
+
+        public DbSet<FavoriteHobby> FavoriteHobbies { get; set; }
     }
 }
