@@ -6,6 +6,8 @@ namespace Final_Project_Group_5.Controllers
     [Route("[controller]")]
     public class FavoriteFoodController : ControllerBase
     {
+
+        public readonly
         public FavoriteFoodController() { }
         [HttpGet]
         public IActionResult Get()
