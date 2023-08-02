@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Final_Project_Group_5.Model
+namespace Final_Project_Group_5.Models
 {
 
     public class FavoriteHobby
