@@ -9,7 +9,7 @@ namespace Final_Project_Group_5.Model
         public int Id { get; set; }
         public string Sport { get; set; }
         public string Crafts { get; set; }
-        public int Time { get; set; }
+        public int HoursPerWeek { get; set; }
         public string Movie { get; set; }
 
 
