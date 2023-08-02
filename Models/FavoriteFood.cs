@@ -1,4 +1,4 @@
-﻿namespace Final_Project_Group_5.Modules
+﻿namespace Final_Project_Group_5.Models
 {
     public class FavoriteFood
     {
