@@ -10,7 +10,7 @@ namespace Final_Project_Group_5.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<FavoriteHobby>().HasData(
-                new FavoriteHobby { Id = 1, Sport = "Boxing", Crafts = "Turkey Sandwich", Time = "Pasta", Movie = "Ice Cream"}
+                new FavoriteHobby { Id = 1, Sport = "Boxing", Crafts = "Drawing", Time = "Night", Movie = "Interstellar"}
                 );
         }
     }
