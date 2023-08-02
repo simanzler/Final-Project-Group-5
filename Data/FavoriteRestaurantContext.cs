@@ -10,7 +10,7 @@ namespace Final_Project_Group_5.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<FavoriteRestaurant>().HasData(
-                new FavoriteRestaurant { Id = 1, Breakfast = "Waffles", Lunch = "Turkey Sandwich", Dinner = "Pasta", Dessert = "Ice Cream"}
+                new FavoriteRestaurant { Id = 1, Italian = "Waffles", Thai = "Turkey Sandwich", Pizza = "Pasta", Sandwiches = "Ice Cream"}
                 );
         }
     }
