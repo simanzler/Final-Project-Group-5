@@ -10,9 +10,9 @@ namespace Final_Project_Group_5.Controllers
 
         private readonly ILogger<FavoriteHobbyController> _logger;
 
-        private readonly FavoriteHobbyContext _context;
+        private readonly ProjectContext _context;
 
-        public FavoriteHobbyController(ILogger<FavoriteHobbyController> logger, FavoriteHobbyContext context)
+        public FavoriteHobbyController(ILogger<FavoriteHobbyController> logger, ProjectContext context)
         {
             _logger = logger;
             _context = context;

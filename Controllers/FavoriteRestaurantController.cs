@@ -10,9 +10,9 @@ namespace Final_Project_Group_5.Controllers
 
         private readonly ILogger<FavoriteRestaurantController> _logger;
 
-        private readonly FavoriteRestaurantContext _context;
+        private readonly ProjectContext _context;
 
-        public FavoriteRestaurantController(ILogger<FavoriteRestaurantController> logger, FavoriteRestaurantContext context)
+        public FavoriteRestaurantController(ILogger<FavoriteRestaurantController> logger, ProjectContext context)
         {
             _logger = logger;
             _context = context;

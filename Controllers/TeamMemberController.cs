@@ -10,9 +10,9 @@ namespace Final_Project_Group_5.Controllers
 
         private readonly ILogger<TeamMemberController> _logger;
 
-        private readonly TeamMemberContext _context;
+        private readonly ProjectContext _context;
 
-        public TeamMemberController(ILogger<TeamMemberController> logger, TeamMemberContext context)
+        public TeamMemberController(ILogger<TeamMemberController> logger, ProjectContext context)
         {
             _logger = logger;
             _context = context;
