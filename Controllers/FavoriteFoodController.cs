@@ -7,8 +7,13 @@ namespace Final_Project_Group_5.Controllers
     public class FavoriteFoodController : ControllerBase
     {
 
-        public readonly
-        public FavoriteFoodController() { }
+        public readonly ILogger<FavoriteFoodController> _logger;
+
+        public FavoriteFoodController(ILogger<FavoriteFoodController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpGet]
         public IActionResult Get()
         {
