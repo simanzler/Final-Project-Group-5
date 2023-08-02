@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 //add dbcontext
-var connectionString = builder.Configuration.GetConnectionString("FavoriteFoddContexts");
+var connectionString = builder.Configuration.GetConnectionString("FavoriteFoodContext");
 builder.Services.AddDbContext<FavoriteFoodContext>(options => options.UseSqlServer(connectionString));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_Group_5.Data
 {
-    public class FavoriteFoodContext : DbContext
+    public class FavoriteRestaurantContext : DbContext
     {
-        public FavoriteFoodContext(DbContextOptions<FavoriteFoodContext> options) : base(options) {}
+        public FavoriteRestaurantContext(DbContextOptions<FavoriteRestaurantContext> options) : base(options) {}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<FavoriteFood>().HasData(
-                new FavoriteFood { Id = 1, Breakfast = "Waffles", Lunch = "Turkey Sandwich", Dinner = "Pasta", Dessert = "Ice Cream"}
+            builder.Entity<FavoriteRestaurant>().HasData(
+                new FavoriteRestaurant { Id = 1, Breakfast = "Waffles", Lunch = "Turkey Sandwich", Dinner = "Pasta", Dessert = "Ice Cream"}
                 );
         }
     }
