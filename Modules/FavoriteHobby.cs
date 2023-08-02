@@ -3,7 +3,7 @@
 namespace Final_Project_Group_5.Model
 {
 
-    public class Hobby
+    public class FavoriteHobby
     {
         [Key]
         public int Id { get; set; }
