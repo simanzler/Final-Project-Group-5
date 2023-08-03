@@ -1,4 +1,5 @@
 using Final_Project_Group_5.Data;
+using Final_Project_Group_5.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<ProjectContext>(options => options.UseSqlServer(co
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocument();
+builder.Services.AddScoped<IFoodContextDAO, FoodContextDAO>();
 
 var app = builder.Build();
 

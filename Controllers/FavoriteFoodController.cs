@@ -1,4 +1,5 @@
 using Final_Project_Group_5.Data;
+using Final_Project_Group_5.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project_Group_5.Controllers
@@ -10,9 +11,9 @@ namespace Final_Project_Group_5.Controllers
 
         private readonly ILogger<FavoriteFoodController> _logger;
 
-        private readonly ProjectContext _context;
+        private readonly IFoodContextDAO _context;
 
-        public FavoriteFoodController(ILogger<FavoriteFoodController> logger, ProjectContext context)
+        public FavoriteFoodController(ILogger<FavoriteFoodController> logger, IFoodContextDAO context)
         {
             _logger = logger;
             _context = context;
@@ -21,8 +22,20 @@ namespace Final_Project_Group_5.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.FavoriteFoods.ToList());
+            return Ok(_context.GetFavoriteFoods());
         }
+
+        [HttpGet("id")]
+        public IActionResult Get(int id) 
+        {
+            var food = _context.GetFavoriteFoodById(id);
+            if (food == null)
+                return NotFound(id); 
+            
+          return Ok(food);
+        }
+
+      
 
     }
 }
