@@ -2,7 +2,7 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class IHobbyContextDAQ
+    public class IHobbyContextDAO
     {
         List<FavoriteHobby> GetFavoriteHobbys();
 

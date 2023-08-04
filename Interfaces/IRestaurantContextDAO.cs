@@ -2,7 +2,7 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class IRestaurantContextDAQ
+    public class IRestaurantContextDAO
     {
         List<FavoriteRestaurant> GetFavoriteRestauranats();
 
