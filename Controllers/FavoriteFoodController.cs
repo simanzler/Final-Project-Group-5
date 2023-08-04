@@ -1,4 +1,5 @@
 using Final_Project_Group_5.Interfaces;
+using Final_Project_Group_5.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project_Group_5.Controllers
@@ -37,17 +38,30 @@ namespace Final_Project_Group_5.Controllers
         [HttpDelete("id")]
         public IActionResult Delete(int id)
         {
-            var food = _context.RemoveFavoriteFoodById(id);
+            var result = _context.RemoveFavoriteFoodById(id);
 
-            if (food == null)
+            if (result == null)
                 return NotFound(id);
 
-            if (string.IsNullOrEmpty(food.Dessert))
+            if (result == 0)
                 return StatusCode(500, "An error occured while processing your request");
 
             return Ok();
 
         }
 
+        [HttpPut]
+        public IActionResult Put(FavoriteFood food)
+        {
+            var result = _context.UpdateFood(food);
+
+            if (result == null)
+                return NotFound(food.Id);
+
+            if (result == 0)
+                return StatusCode(500, "An error occured while processing your request");
+
+            return Ok();
+        }
     }
 }

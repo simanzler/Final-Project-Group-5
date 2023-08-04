@@ -8,10 +8,8 @@ namespace Final_Project_Group_5.Interfaces
 
         FavoriteFood GetFavoriteFoodById(int id);
 
-        FavoriteFood RemoveFavoriteFoodById(int id);
-
-
-
+        int? RemoveFavoriteFoodById(int id);
+        int? UpdateFood(FavoriteFood food);
     }
         
 }
