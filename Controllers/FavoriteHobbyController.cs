@@ -1,3 +1,4 @@
+using Final_Project_Group_5.Interfaces;
 using Final_Project_Group_5.Data;
 using Final_Project_Group_5.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,9 @@ namespace Final_Project_Group_5.Controllers
 
         private readonly ILogger<FavoriteHobbyController> _logger;
 
-        private readonly ProjectContext _context;
+        private readonly IHobbyContextDAO _context;
 
-        public FavoriteHobbyController(ILogger<FavoriteHobbyController> logger, ProjectContext context)
+        public FavoriteHobbyController(ILogger<FavoriteHobbyController> logger, IHobbyContextDAO context)
         {
             _logger = logger;
             _context = context;
@@ -22,7 +23,7 @@ namespace Final_Project_Group_5.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_context.FavoriteHobbies.ToList());
+            return Ok(_context.GetFavoriteHobbies());
         }
 
         [HttpGet("id")]
