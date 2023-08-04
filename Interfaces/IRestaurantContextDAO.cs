@@ -2,7 +2,7 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class IRestaurantContextDAO
+    public interface IRestaurantContextDAO
     {
         List<FavoriteRestaurant> GetFavoriteRestauranats();
 
@@ -10,5 +10,6 @@ namespace Final_Project_Group_5.Interfaces
 
         int? RemoveFavoriteRestaurantById(int id);
         int? UpdateRestaurant(FavoriteRestauarant restaurant);
+        int? Add(FavoriteRestaurant restaurant);
     }
 }

@@ -10,5 +10,6 @@ namespace Final_Project_Group_5.Interfaces
 
         int? RemoveFavoriteHobbyById(int id);
         int? UpdateHobby(FavoriteHobby hobby);
+        int? Add(FavoriteHobby hobby);
     }
 }

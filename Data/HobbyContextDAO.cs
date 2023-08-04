@@ -61,13 +61,11 @@ namespace Final_Project_Group_5.Data
 
         }
 
-        public int? Add(FavoriteFood food)
+        public int? Add(FavoriteHobby hobby)
         {
-            var foods = _context.FavoriteFoods.Where(x => x.Breakfast.Equals(food.Breakfast) && x.Lunch.Equals(food.Lunch)).FirstOrDefault();
-            if (foods != null) return null;
             try
             {
-                _context.FavoriteFoods.Add(food);
+                _context.FavoriteHobbies.Add(hobby);
                 _context.SaveChanges();
                 return 1;
             }

@@ -2,7 +2,7 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class ITeamMemberContextDAO
+    public interface ITeamMemberContextDAO
     {
         List<TeamMember> GetFavoriteTeamMembers();
 
