@@ -17,6 +17,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocument();
 builder.Services.AddScoped<IFoodContextDAO, FoodContextDAO>();
+builder.Services.AddScoped<IHobbyContextDAO, HobbyContextDAO>();
+builder.Services.AddScoped<IRestaurantContextDAO, RestaurantContextDAO>();
+builder.Services.AddScoped<ITeamMemberContextDAO, TeamMemberContextDAO>();
 
 var app = builder.Build();
 
