@@ -4,11 +4,11 @@ namespace Final_Project_Group_5.Interfaces
 {
     public class IRestaurantContextDAQ
     {
-        List<FavoriteFood> GetFavoriteFoods();
+        List<FavoriteRestaurant> GetFavoriteRestauranats();
 
-        FavoriteFood GetFavoriteFoodById(int id);
+        FavoriteRestaurant GetFavoriteRestaurantById(int id);
 
-        int? RemoveFavoriteFoodById(int id);
-        int? UpdateFood(FavoriteFood food);
+        int? RemoveFavoriteRestaurantById(int id);
+        int? UpdateRestaurant(FavoriteRestauarant restaurant);
     }
 }

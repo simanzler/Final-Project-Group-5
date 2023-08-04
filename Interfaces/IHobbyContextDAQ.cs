@@ -4,11 +4,11 @@ namespace Final_Project_Group_5.Interfaces
 {
     public class IHobbyContextDAQ
     {
-        List<FavoriteFood> GetFavoriteFoods();
+        List<FavoriteHobby> GetFavoriteHobbys();
 
-        FavoriteFood GetFavoriteFoodById(int id);
+        FavoriteHobby GetFavoriteHobbyById(int id);
 
-        int? RemoveFavoriteFoodById(int id);
-        int? UpdateFood(FavoriteFood food);
+        int? RemoveFavoriteHobbyById(int id);
+        int? UpdateHobby(FavoriteHobby hobby);
     }
 }
