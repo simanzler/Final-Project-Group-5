@@ -3,7 +3,7 @@ using Final_Project_Group_5.Models;
 
 namespace Final_Project_Group_5.Data
 {
-    public class TeamMemeberContextDAO : IFoodContextDAO
+    public class TeamMemberContextDAO : ITeamMemberContextDAO
     {
         private ProjectContext _context;
         public TeamMemberContextDAO(ProjectContext context)
@@ -11,23 +11,23 @@ namespace Final_Project_Group_5.Data
             _context = context;
         }
 
-        public List<FavoriteFood> GetFavoriteFoods()
+        public List<TeamMember> GetTeamMembers()
         {
-            return _context.FavoriteFoods.ToList();
+            return _context.TeamMembers.ToList();
         }
 
-        public FavoriteFood GetFavoriteFoodById(int id)
+        public TeamMember GetTeamMemberById(int id)
         {
-            return _context.FavoriteFoods.Where(x => x.Id.Equals(id)).FirstOrDefault();
+            return _context.TeamMembers.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
-        public int? RemoveFavoriteFoodById(int id)
+        public int? RemoveTeamMemberById(int id)
         {
-            var food = this.GetFavoriteFoodById(id);
-            if (food == null) return null;
+            var member = this.GetTeamMemberById(id);
+            if (member == null) return null;
             try
             {
-                _context.FavoriteFoods.Remove(food);
+                _context.TeamMembers.Remove(member);
                 _context.SaveChanges();
                 return 1;
             }
@@ -38,19 +38,19 @@ namespace Final_Project_Group_5.Data
 
         }
 
-        public int? UpdateFood(FavoriteFood food)
+        public int? UpdateTeamMember(TeamMember member)
         {
-            var foodToUpdate = this.GetFavoriteFoodById(food.Id);
-            if (foodToUpdate == null) return null;
+            var memberToUpdate = this.GetTeamMemberById(member.Id);
+            if (memberToUpdate == null) return null;
 
-            foodToUpdate.Breakfast = food.Breakfast;
-            foodToUpdate.Lunch = food.Lunch;
-            foodToUpdate.Dinner = food.Dinner;
-            foodToUpdate.Dessert = food.Dessert;
+            memberToUpdate.Birthdate = member.Birthdate;
+            memberToUpdate.YearintheProgram = member.YearintheProgram;
+            memberToUpdate.FirstName = member.FirstName;
+            memberToUpdate.LastName = member.LastName;
 
             try
             {
-                _context.FavoriteFoods.Update(foodToUpdate);
+                _context.TeamMembers.Update(memberToUpdate);
                 _context.SaveChanges();
                 return 1;
             }
@@ -62,13 +62,11 @@ namespace Final_Project_Group_5.Data
 
         }
 
-        public int? Add(FavoriteFood food)
+        public int? Add(TeamMember member)
         {
-            var foods = _context.FavoriteFoods.Where(x => x.Breakfast.Equals(food.Breakfast) && x.Lunch.Equals(food.Lunch)).FirstOrDefault();
-            if (foods != null) return null;
             try
             {
-                _context.FavoriteFoods.Add(food);
+                _context.TeamMembers.Add(member);
                 _context.SaveChanges();
                 return 1;
             }
