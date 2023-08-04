@@ -35,7 +35,7 @@ namespace Final_Project_Group_5.Controllers
           return Ok(food);
         }
 
-        [HttpDelete("id")]
+        [HttpDelete]
         public IActionResult Delete(int id)
         {
             var result = _context.RemoveFavoriteFoodById(id);
@@ -58,6 +58,18 @@ namespace Final_Project_Group_5.Controllers
             if (result == null)
                 return NotFound(food.Id);
 
+            if (result == 0)
+                return StatusCode(500, "An error occured while processing your request");
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult Post(FavoriteFood food)
+        {
+            var result = _context.Add(food);
+            if (result == null)
+                return StatusCode(500, "Food already exists");
             if (result == 0)
                 return StatusCode(500, "An error occured while processing your request");
 

@@ -10,6 +10,7 @@ namespace Final_Project_Group_5.Interfaces
 
         int? RemoveFavoriteFoodById(int id);
         int? UpdateFood(FavoriteFood food);
+        int? Add(FavoriteFood food);
     }
         
 }
