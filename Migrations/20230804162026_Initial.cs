@@ -80,26 +80,41 @@ namespace Final_Project_Group_5.Migrations
             migrationBuilder.InsertData(
                 table: "FavoriteFoods",
                 columns: new[] { "Id", "Breakfast", "Dessert", "Dinner", "Lunch" },
-                values: new object[] { 1, "Waffles", "Ice Cream", "Pasta", "Turkey Sandwich" });
+                values: new object[,]
+                {
+                    { 1, "Waffles", "Ice Cream", "Pasta", "Turkey Sandwich" },
+                    { 2, "Cereal", "Cake", "Curry", "Chicken Sandwich" },
+                    { 3, "Pancakes", "Brownies", "Wings", "Hamburger" }
+                });
 
             migrationBuilder.InsertData(
                 table: "FavoriteHobbies",
                 columns: new[] { "Id", "Crafts", "HoursPerWeek", "Movie", "Sport" },
-                values: new object[] { 1, "Model Kit", 1, "Interstellar", "Boxing" });
+                values: new object[,]
+                {
+                    { 1, "Model Kits", 1, "Interstellar", "Boxing" },
+                    { 2, "Drawing", 3, "Tenet", "Soccer" },
+                    { 3, "Knitting", 2, "The Dark Knight", "Basketball" }
+                });
 
             migrationBuilder.InsertData(
                 table: "FavoriteRestaurants",
                 columns: new[] { "Id", "Italian", "Pizza", "Sandwiches", "Thai" },
-                values: new object[] { 1, "Nicola's", "Dewey's", "Jersey Mike's", "Ruthai" });
+                values: new object[,]
+                {
+                    { 1, "Nicola's", "Dewey's", "Jersey Mike's", "Ruthai" },
+                    { 2, "Caruso's", "Adriatico's", "McAllister's", "ChaoPhraya" },
+                    { 3, "Palermo's", "Magoo's", "Panera", "Numprik" }
+                });
 
             migrationBuilder.InsertData(
                 table: "TeamMembers",
                 columns: new[] { "Id", "Birthdate", "CollegeProgram", "FirstName", "LastName", "YearintheProgram" },
                 values: new object[,]
                 {
-                    { 1, 1, "Software Development", "Dilpreet", "Supra", 2 },
-                    { 2, 1, "Software Development", "Dilpreet", "Supra", 2 },
-                    { 3, 1, "Software Development", "Dilpreet", "Supra", 2 }
+                    { 1, 905, "Software Development", "Dilpreet", "Supra", 2 },
+                    { 2, 905, "", "Simon", "Manzler", 2 },
+                    { 3, 905, "", "Amin", "Juhar", 2 }
                 });
         }
 

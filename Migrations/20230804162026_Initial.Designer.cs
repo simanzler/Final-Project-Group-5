@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Final_Project_Group_5.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20230802181321_Initial")]
+    [Migration("20230804162026_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -60,6 +60,22 @@ namespace Final_Project_Group_5.Migrations
                             Dessert = "Ice Cream",
                             Dinner = "Pasta",
                             Lunch = "Turkey Sandwich"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Breakfast = "Cereal",
+                            Dessert = "Cake",
+                            Dinner = "Curry",
+                            Lunch = "Chicken Sandwich"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Breakfast = "Pancakes",
+                            Dessert = "Brownies",
+                            Dinner = "Wings",
+                            Lunch = "Hamburger"
                         });
                 });
 
@@ -94,10 +110,26 @@ namespace Final_Project_Group_5.Migrations
                         new
                         {
                             Id = 1,
-                            Crafts = "Model Kit",
+                            Crafts = "Model Kits",
                             HoursPerWeek = 1,
                             Movie = "Interstellar",
                             Sport = "Boxing"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Crafts = "Drawing",
+                            HoursPerWeek = 3,
+                            Movie = "Tenet",
+                            Sport = "Soccer"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Crafts = "Knitting",
+                            HoursPerWeek = 2,
+                            Movie = "The Dark Knight",
+                            Sport = "Basketball"
                         });
                 });
 
@@ -137,6 +169,22 @@ namespace Final_Project_Group_5.Migrations
                             Pizza = "Dewey's",
                             Sandwiches = "Jersey Mike's",
                             Thai = "Ruthai"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Italian = "Caruso's",
+                            Pizza = "Adriatico's",
+                            Sandwiches = "McAllister's",
+                            Thai = "ChaoPhraya"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Italian = "Palermo's",
+                            Pizza = "Magoo's",
+                            Sandwiches = "Panera",
+                            Thai = "Numprik"
                         });
                 });
 
@@ -174,7 +222,7 @@ namespace Final_Project_Group_5.Migrations
                         new
                         {
                             Id = 1,
-                            Birthdate = 1,
+                            Birthdate = 905,
                             CollegeProgram = "Software Development",
                             FirstName = "Dilpreet",
                             LastName = "Supra",
@@ -183,19 +231,19 @@ namespace Final_Project_Group_5.Migrations
                         new
                         {
                             Id = 2,
-                            Birthdate = 1,
-                            CollegeProgram = "Software Development",
-                            FirstName = "Dilpreet",
-                            LastName = "Supra",
+                            Birthdate = 905,
+                            CollegeProgram = "",
+                            FirstName = "Simon",
+                            LastName = "Manzler",
                             YearintheProgram = 2
                         },
                         new
                         {
                             Id = 3,
-                            Birthdate = 1,
-                            CollegeProgram = "Software Development",
-                            FirstName = "Dilpreet",
-                            LastName = "Supra",
+                            Birthdate = 905,
+                            CollegeProgram = "",
+                            FirstName = "Amin",
+                            LastName = "Juhar",
                             YearintheProgram = 2
                         });
                 });
