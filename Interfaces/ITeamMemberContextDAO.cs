@@ -2,7 +2,7 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class ITeamMemberContextDAO
+    public interface ITeamMemberContextDAO
     {
         List<FavoriteTeamMember> GetFavoriteTeamMembers();
 
@@ -10,5 +10,6 @@ namespace Final_Project_Group_5.Interfaces
 
         int? RemoveFavoriteTeamMemberById(int id);
         int? UpdateTeamMember(FavoriteTeamMember teamMember);
+        int? Add(FavoriteTeamMember teamMember);
     }
 }

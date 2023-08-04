@@ -2,13 +2,14 @@
 
 namespace Final_Project_Group_5.Interfaces
 {
-    public class IHobbyContextDAO
+    public interface IHobbyContextDAO
     {
-        List<FavoriteHobby> GetFavoriteHobbys();
+        List<FavoriteHobby> GetFavoriteHobbies();
 
         FavoriteHobby GetFavoriteHobbyById(int id);
 
         int? RemoveFavoriteHobbyById(int id);
         int? UpdateHobby(FavoriteHobby hobby);
+        int? Add(FavoriteHobby hobby);
     }
 }
