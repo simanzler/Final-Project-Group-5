@@ -34,7 +34,20 @@ namespace Final_Project_Group_5.Controllers
           return Ok(food);
         }
 
-      
+        [HttpDelete("id")]
+        public IActionResult Delete(int id)
+        {
+            var food = _context.RemoveFavoriteFoodById(id);
+
+            if (food == null)
+                return NotFound(id);
+
+            if (string.IsNullOrEmpty(food.Dessert))
+                return StatusCode(500, "An error occured while processing your request");
+
+            return Ok();
+
+        }
 
     }
 }

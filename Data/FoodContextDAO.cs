@@ -11,14 +11,30 @@ namespace Final_Project_Group_5.Data
             _context = context;
         }
 
-        public object? GetFavoriteFoodById(int id)
+        public List<FavoriteFood> GetFavoriteFoods()
+        {
+            return _context.FavoriteFoods.ToList();
+        }
+
+        public FavoriteFood GetFavoriteFoodById(int id)
         {
             return _context.FavoriteFoods.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
-        public List<FavoriteFood> GetFavoriteFoods()
+        public FavoriteFood RemoveFavoriteFoodById(int id)
         {
-            return _context.FavoriteFoods.ToList();
+            var food = this.GetFavoriteFoodById(id);
+            if (food == null) return null;
+            try
+            {
+                _context.FavoriteFoods.Remove(food);
+                return food;
+            }
+            catch (Exception) 
+            {
+                return new FavoriteFood();
+            }
+            
         }
     }
 }
