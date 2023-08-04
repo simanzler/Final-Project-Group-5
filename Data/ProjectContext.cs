@@ -27,7 +27,7 @@ namespace Final_Project_Group_5.Data
             builder.Entity<TeamMember>().HasData(
                 new TeamMember { Id = 1, FirstName = "Dilpreet", LastName = "Supra", Birthdate = 0905, CollegeProgram = "Software Development", YearintheProgram = 2 },
                 new TeamMember { Id = 2, FirstName = "Simon", LastName = "Manzler", Birthdate = 0905, CollegeProgram = "", YearintheProgram = 2 },
-                new TeamMember { Id = 3, FirstName = "Amin", LastName = "Juhar", Birthdate = 0905, CollegeProgram = "", YearintheProgram = 2 }
+                new TeamMember { Id = 3, FirstName = "Amin", LastName = "Juhar", Birthdate = 0319, CollegeProgram = "Netwok Systems and Admin", YearintheProgram = 3 }
                 );
         }
 
