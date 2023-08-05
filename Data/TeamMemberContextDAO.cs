@@ -47,6 +47,7 @@ namespace Final_Project_Group_5.Data
             memberToUpdate.YearintheProgram = member.YearintheProgram;
             memberToUpdate.FirstName = member.FirstName;
             memberToUpdate.LastName = member.LastName;
+            memberToUpdate.CollegeProgram = member.CollegeProgram;
 
             try
             {
