@@ -113,8 +113,8 @@ namespace Final_Project_Group_5.Migrations
                 values: new object[,]
                 {
                     { 1, 905, "Software Development", "Dilpreet", "Supra", 2 },
-                    { 2, 905, "", "Simon", "Manzler", 2 },
-                    { 3, 905, "", "Amin", "Juhar", 2 }
+                    { 2, 905, "Software Development", "Simon", "Manzler", 2 },
+                    { 3, 905, "Network Systems", "Amin", "Juhar", 2 }
                 });
         }
 
